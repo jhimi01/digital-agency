@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: .2s linear;
 }
 :root {
   --background-color: #f52c2c;
@@ -17,7 +18,7 @@ ul li a {
   text-decoration: none;
   color: #353535;
   padding: 10px 10px;
-  transition: 0.3s linear;
+  /* transition: 0.3s linear; */
 }
 ul li:hover a {
   background-color: var(--background-color);
@@ -30,6 +31,14 @@ ul li:hover a {
   color: #fff;
   font-size: 20px;
 }
+button{
+    cursor: pointer;
+}
+.btn:hover{
+  background: #fff;
+  color: var(--background-color);
+}
+
 span {
   color: var(--background-color);
 }
@@ -71,6 +80,9 @@ header .banner .second-btn {
   margin-left: 10px;
   background: #fff;
   color: black;
+}
+header .banner .second-btn:hover{
+    background: #b4b3b3;
 }
 
 /* service section */
