@@ -8,9 +8,17 @@
 }
 ul li {
   list-style-type: none;
+  cursor: pointer;
 }
 ul li a {
   text-decoration: none;
+  color: #353535;
+  padding: 10px 10px;
+  transition: 0.3s linear;
+}
+ul li:hover a {
+  background-color: var(--background-color);
+  color: #fff;
 }
 .btn {
   padding: 15px 20px;
@@ -19,213 +27,276 @@ ul li a {
   color: #fff;
   font-size: 20px;
 }
-span{
-    color: var(--background-color);
+span {
+  color: var(--background-color);
 }
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 30px;
   background-color: #cccccc;
 }
 nav ul {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
+  gap: 20px;
 }
-header .banner{
-    background: url(../asset/image/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.274);
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
+header .banner {
+  background: url(../asset/image/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.274);
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
 }
-header .banner h1{
-    font-size: 90px;
-    font-weight: bold;
+header .banner h1 {
+  font-size: 90px;
+  font-weight: bold;
 }
-header .banner p{
-    font-size: 25px;
-    margin: 15px 0;
+header .banner p {
+  font-size: 25px;
+  margin: 15px 0;
 }
-header .banner .second-btn{
-    margin-left: 10px;
-    background: #fff;
-    color: black;
+header .banner .second-btn {
+  margin-left: 10px;
+  background: #fff;
+  color: black;
 }
 
 /* service section */
-.service{
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.767)), url(../asset/image/footer-bg.png);
-    color: #fff;
-    padding: 10px 20px;
+.service {
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.767)),
+    url(../asset/image/footer-bg.png);
+  color: #fff;
+  padding: 10px 20px;
 }
-.service .container{
-    display: flex;
-
+.service .container {
+  display: flex;
 }
-.service .container .content{
-    width: 50%;
-    margin-top: 90px;
-    line-height: 2;
+.service .container .content {
+  width: 50%;
+  margin-top: 90px;
+  line-height: 2;
 }
-.service .container .content .servic-list{
-    padding: 15px 29px;
-    border-radius: 50px;
-    background-color: #fff;
-    color: gray;
-    border: none;
-    font-size: 17px;
+.service .container .content .servic-list {
+  padding: 15px 29px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: gray;
+  border: none;
+  font-size: 17px;
 }
-.service .container .content h1{
-    font-size: 45px;
-    font-weight: bold;
-    margin: 20px 0;
+.service .container .content h1 {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 20px 0;
 }
-.service .container .content p{
-    font-size: 20px;
-    margin: 10px 0;
+.service .container .content p {
+  font-size: 20px;
+  margin: 10px 0;
 }
-.service .container .content .man-profile{
-    margin-top: 30px;
+.service .container .content .man-profile {
+  margin-top: 30px;
 }
-.service .container .content .man-profile, .img-name{
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
+.service .container .content .man-profile,
+.img-name {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
-.service .container .content .man-profile .img-name{
-    padding-right: 70px;
-    margin-right: 10px;
-   border-right: 1px solid var(--background-color);
+.service .container .content .man-profile .img-name {
+  padding-right: 70px;
+  margin-right: 10px;
+  border-right: 1px solid var(--background-color);
 }
-.content .man-profile .img-name img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+.content .man-profile .img-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-.service .container .content .man-profile button{
-    border-radius: 40px;
-    color: var(--background-color);
-    padding: 15px 29px;
-    border: none;
-    font-size: 17px;
+.service .container .content .man-profile button {
+  border-radius: 40px;
+  color: var(--background-color);
+  padding: 15px 29px;
+  border: none;
+  font-size: 17px;
 }
-.service .container .icons{
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+.service .container .icons {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
-.service .container .icons div{
-    background: #fff;
-    border-radius: 10px;
+.service .container .icons div {
+  background: #fff;
+  border-radius: 10px;
 }
-.service .container .icons div img{
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-}
-
-.service .call-section{
-    background: var(--background-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 950px;
-    height: 150px;
-    margin: 0 auto;
-    padding: 20px 10px;
-    border-radius: 10px;
-    margin-bottom: -70px;
-    margin-top: 35px;
-    font-size: 20px;
-}
-.service .call-section .number{
-    display: flex;
-    align-items: center;
-    border-right: 2px solid gray;
-}
-.service .call-section .number .num{
-    margin-left: 20px;
-}
-.service .call-section .number img{
-    height: 60px;
-    width: 60px;
-}
-.service .call-section .call-details{
-    margin-left: 10px;
-    display: flex;
-}
-.service .call-section .call-details button{
-    padding: 15px 20px;
-    border-radius: 20px;
-    color: #000;
-    border: none;
+.service .container .icons div img {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
 }
 
+.service .call-section {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 950px;
+  height: 150px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border-radius: 10px;
+  margin-bottom: -70px;
+  margin-top: 35px;
+  font-size: 20px;
+}
+.service .call-section .number {
+  display: flex;
+  align-items: center;
+  border-right: 2px solid gray;
+}
+.service .call-section .number .num {
+  margin-left: 20px;
+}
+.service .call-section .number img {
+  height: 60px;
+  width: 60px;
+}
+.service .call-section .call-details {
+  margin-left: 10px;
+  display: flex;
+}
+.service .call-section .call-details button {
+  padding: 15px 20px;
+  border-radius: 20px;
+  color: #000;
+  border: none;
+}
 
+/* blog section */
+.blog .container {
+  max-width: 900px;
+  margin: 130px auto;
+}
+.blog .container h1 {
+  font-size: 60px;
+  text-align: center;
+}
+.blog .container p {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.blog .container .card-grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.blog .container .card-grp .card {
+  border-radius: 15px;
+  box-shadow: 18px 14px 17px rgba(0, 0, 0, 0.527);
+}
+.blog .container .card-grp img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.blog .container .card-grp .card .con {
+  padding: 10px 20px;
+}
+.blog .container .card-grp .card h3 {
+  font-size: 20px;
+}
+.blog .container .card-grp .card p {
+  font-size: 19px;
+  color: #353535;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* footer ssection */
+footer {
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.767)),
+    url(../asset/image/footer-bg.png);
+}
+footer .container {
+  line-height: 2;
+  padding: 100px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: sans-serif;
+  gap: 10px;
+}
 
 @media screen and (max-width: 768px) {
+  .btn {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
 
-    .btn {
-        padding: 10px 15px;
-        font-size: 15px;
-      }
+  header .banner {
+    padding: 0 20px;
+  }
+  header .banner h1 {
+    font-size: 40px;
+  }
+  header .banner p {
+    font-size: 20px;
+  }
 
-
-    header .banner{
-        padding: 0 20px;
-    }
-    header .banner h1{
-        font-size: 40px;
-    }
-    header .banner p{
-        font-size: 20px;
-    }
-
-    .service .container {
-        /* display: flex; */
-        flex-direction: column;
-    }
-    .service .container .content {
-        width: 100%;}
-        .service .container .icons {
-            width: 100%;
-            margin-top: 40px;
-        }
-        .service .call-section .call-details {
-            font-size: 15px;
-        }
-        .service .call-section .call-details button {
-            padding: 6px 5px;
-            font-size: 10px;
-        }
+  .service .container {
+    /* display: flex; */
+    flex-direction: column;
+  }
+  .service .container .content {
+    width: 100%;
+  }
+  .service .container .icons {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .service .call-section .call-details {
+    font-size: 15px;
+  }
+  .service .call-section .call-details button {
+    padding: 6px 5px;
+    font-size: 10px;
+  }
+  .blog {
+    padding: 0 15px;
+  }
+  .blog .container h1 {
+    font-size: 40px;
+  }
+  .blog .container p {
+    font-size: 20px;
+  }
+  .blog .container .card-grp {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 556px) {
-    header nav{
-        flex-direction: column;
-    }
-    header nav ul{
-        flex-direction: column;
-    }
+  header nav {
+    flex-direction: column;
+  }
+  header nav ul {
+    flex-direction: column;
+  }
+  footer .container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
 }
