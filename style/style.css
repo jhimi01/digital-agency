@@ -52,10 +52,54 @@ header .banner h1{
     font-weight: bold;
 }
 header .banner p{
-    font-size: 20px;
+    font-size: 25px;
     margin: 15px 0;
 }
 header .banner .second-btn{
+    margin-left: 10px;
     background: #fff;
     color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 15px;
+      }
+
+
+    header .banner{
+        padding: 0 20px;
+    }
+    header .banner h1{
+        font-size: 40px;
+    }
+    header .banner p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 556px) {
+    header nav{
+        flex-direction: column;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
 }
