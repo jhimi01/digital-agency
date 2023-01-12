@@ -6,6 +6,9 @@
 :root {
   --background-color: #f52c2c;
 }
+html{
+    scroll-behavior: smooth;
+}
 ul li {
   list-style-type: none;
   cursor: pointer;
